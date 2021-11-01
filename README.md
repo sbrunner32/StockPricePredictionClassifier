@@ -3,7 +3,7 @@ This contains applications which gather stock price information for provided com
 ## What are we predicting? ## 
 We are attempting to predict whether a stock's price will go up or down after a number of days equal to our provided prediction_period. Thus each moving average has an associated truth value that our models try to predict given the information within that moving average's data provided.
 ## GenerateSymbolsList ##
-This file is used to generate a list of symbols from publicly traded companies on the stock market. This verifies that any companies we use have applicable data over our selected time period we choose for observation and data collection.
+This file is used to generate a list of symbols from publicly traded companies on the stock market. This verifies that any companies we use have applicable data over our selected time period we choose for observation and data collection. This application can only verify the data for about 50 companies or so at a time before Jupyter notebook starts encountering problems. Fixes are planned to make the verification process a lot less intensive. For now, the application is only briefly used as our primary work was done with a few major companies.
 ## ExtractingDataCSV ##
 This file is used to download the stock market data for our provided list of stock symbols over our selected observation period. It also takes in a provided window_period which is used to generate moving average values of the stock's attributes. Generates a CSV file containing the moving average values along with their associated truth values (whether the stock went up or down in price after the provided prediction_period).
 ## Scika_Testing ##
